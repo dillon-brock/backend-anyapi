@@ -8,7 +8,7 @@ describe('backend-express-template routes', () => {
     return setup(pool);
   });
   it('GET /plants should return a list of plants', async () => {
-    const resp = await request(app).get('/plant');
+    const resp = await request(app).get('/plants');
     expect(resp.body.length).toEqual(4);
     expect(resp.body[0]).toEqual({
       id: expect.any(String),
